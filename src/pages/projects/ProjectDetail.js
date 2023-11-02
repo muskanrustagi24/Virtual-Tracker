@@ -22,7 +22,8 @@ const ProjectDetail = () => {
         axios.get(`${baseURL}select=*`, config).then((response) => {
             dispatch({ type: "GET_ALL_ITEMS", payload: response.data })
         });
-    }, []);
+
+    }, [dispatch]);
 
     const deleteItem = (id) => {
         axios

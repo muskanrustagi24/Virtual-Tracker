@@ -22,7 +22,8 @@ const AllProjects = () => {
             dispatch({ type: "GET_ALL_PROJECTS", payload: response.data })
             setIsDataLoading(false)
         });
-    }, []);
+        
+    }, [dispatch]);
 
     const deleteProject = (id) => {
         axios
